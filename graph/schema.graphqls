@@ -35,3 +35,6 @@ type Token {
 type Mutation {
   authentication(input: NewUser!): Token!
 }
+
+# Auth directive
+directive @isAuthenticated on FIELD_DEFINITION
