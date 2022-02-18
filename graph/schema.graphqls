@@ -6,7 +6,7 @@
 #
 # https://gqlgen.com/getting-started/
 
-"Describes the data that will be used for people and person"
+#Describes the data that will be used for people and person"
 
 type Query {
   peoples(first: Int): [People!]! @isAuthenticated
@@ -14,7 +14,7 @@ type Query {
 }
 
 
-"Person type: Describes a specific person within an array of persons"
+#Person type: Describes a specific person within an array of persons"
 type People {
   name: String!
   height: String
