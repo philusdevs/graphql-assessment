@@ -1,0 +1,37 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+"Describes the data that will be used for people and person"
+
+type Query {
+  peoples(first: Int): [People!]! @isAuthenticated
+  peopleByName(name: String!): People @isAuthenticated
+}
+
+
+"Person type: Describes a specific person within an array of persons"
+type People {
+  name: String!
+  height: String
+  mass: String
+  gender: String!
+  homeworld: String
+}
+
+input NewUser {
+  username: String!
+}
+
+type Token {
+  jwtToken: String!
+}
+
+# Mutation for  JWT Auth
+type Mutation {
+  authentication(input: NewUser!): Token!
+}
