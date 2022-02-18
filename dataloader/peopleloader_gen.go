@@ -33,7 +33,7 @@ type PeopleLoader struct {
 	// this method provides the data for the loader
 	fetch func(keys []string) ([]*model.People, []error)
 
-	// how long to done before sending a batch
+	// how long to do before sending a batch
 	wait time.Duration
 
 	// this will limit the maximum number of keys to send in one batch, 0 = no limit
