@@ -8,6 +8,7 @@ import (
 	"errors"
 	"strconv"
 	"sync"
+	"fmt"
 	"sync/atomic"
 
 	"github.com/99designs/gqlgen/graphql"
@@ -410,7 +411,7 @@ func (ec *executionContext) _Mutation_authentication(ctx context.Context, field 
 	}
 	res := resTmp.(*model.Token)
 	fc.Result = res
-	return ec.marshalNToken2ᚖgithubᚗcomᚋphilusdevs/graphql-assessmentᚋgraphᚋmodelᚐToken(ctx, field.Selections, res)
+	return ec.marshalNToken2ᚖgithubᚗcomᚋphilusdevsᚋgraphqlᚑassessmentᚋgraphᚋmodelᚐToken(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _People_name(ctx context.Context, field graphql.CollectedField, obj *model.People) (ret graphql.Marshaler) {
