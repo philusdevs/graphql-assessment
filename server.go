@@ -29,6 +29,7 @@ func main() {
 	if port == "" {
 		port = defaultPort
 	}
+
 	c := generated.Config{Resolvers: &graph.Resolver{}}
 	c.Directives.IsAuthenticated = directives.Authenticate
 
