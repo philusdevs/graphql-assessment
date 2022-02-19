@@ -6,16 +6,17 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/99designs/gqlgen/graphql/handler"
-	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/philusdevs/graphql-assessment/dataloader"
 	"github.com/philusdevs/graphql-assessment/directives"
 	"github.com/philusdevs/graphql-assessment/graph"
 	"github.com/philusdevs/graphql-assessment/graph/generated"
 	"github.com/spf13/viper"
+
+	"github.com/99designs/gqlgen/graphql/handler"
+	"github.com/99designs/gqlgen/graphql/playground"
 )
 
-const defaultPort = "8000"
+const defaultPort = "8080"
 
 func main() {
 	viper.SetConfigFile("config.yml")
