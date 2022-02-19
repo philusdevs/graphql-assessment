@@ -60,7 +60,7 @@ type peopleLoaderBatch struct {
 	done    chan struct{}
 }
 
-// Load a People by key, batching and caching will be applied automatically
+// Load People by key, batching and caching will be applied automatically
 func (l *PeopleLoader) Load(key string) (*model.People, error) {
 	return l.LoadThunk(key)()
 }
@@ -92,7 +92,7 @@ func (l *PeopleLoader) LoadThunk(key string) func() (*model.People, error) {
 		}
 
 		var err error
-		// its convenient to be able to return a single error for everything
+		// returns a single error for everything
 		if len(batch.error) == 1 {
 			err = batch.error[0]
 		} else if batch.error != nil {
@@ -109,7 +109,7 @@ func (l *PeopleLoader) LoadThunk(key string) func() (*model.People, error) {
 	}
 }
 
-// LoadAll fetches many keys at once. It will be broken into appropriate sized
+// LoadAll fetches many keys at once. broken into appropriate sized
 // sub batches depending on how the loader is configured
 func (l *PeopleLoader) LoadAll(keys []string) ([]*model.People, []error) {
 	results := make([]func() (*model.People, error), len(keys))
@@ -160,7 +160,7 @@ func (l *PeopleLoader) Prime(key string, value *model.People) bool {
 	return !found
 }
 
-// Clear the value at key from the cache, if it exists
+// Clears the value at key from the cache, if the value exists
 func (l *PeopleLoader) Clear(key string) {
 	l.mu.Lock()
 	delete(l.cache, key)

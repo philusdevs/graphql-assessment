@@ -23,7 +23,7 @@ var ctxReqToken = ctxKeyType{"tokenCtx"}
 // For signing key context
 var ctxSignedKey = ctxKeyType{"signedKey"}
 
-// Create the JWT key used to create the signature
+// Creates the JWT key that will be used to create the signature
 var JwtKey = []byte("my_secret_key")
 
 type loaders struct {
