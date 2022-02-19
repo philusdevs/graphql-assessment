@@ -1,0 +1,7 @@
+graphl-assessment:
+  server:
+    port: 8000
+  starwars-api:
+    endpoint: https://swapi.dev/api/
+    page-path: people/?page=
+    search-path: people/?search=
