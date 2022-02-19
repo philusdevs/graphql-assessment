@@ -35,9 +35,6 @@ func main() {
 	srv := handler.NewDefaultServer(generated.NewExecutableSchema(c))
 	router := http.NewServeMux()
 
-	srv := handler.NewDefaultServer(generated.NewExecutableSchema(c))
-	router := generated.Config{Resolvers: &graph.Resolver{})
-
 	router.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	router.Handle("/query", srv)
 
