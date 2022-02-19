@@ -1,4 +1,4 @@
-graphl-assessment:
+graphql-assessment:
   server:
     port: 8080
   starwars-api:
